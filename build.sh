@@ -1,8 +1,8 @@
 #!/bin/sh
 set -e
-BUILD_BY="matt@traverse.com.au"
+BUILD_BY="gr@ham.ie"
 
-apt-get install -y kpartx make live-build pbuilder devscripts python3-pystache python3-git python3-setuptools parted dosfstools
+apt-get install -y kpartx make live-build pbuilder devscripts python3-pystache python3-git python3-setuptools parted dosfstools docker.io
 #CONTAINER_NAME="vyos/vyos-build:current-arm64"
 CONTAINER_NAME="vyos-arm64-libbpf"
 docker build -t "${CONTAINER_NAME}" vyos-build/docker/
